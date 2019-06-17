@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: shell
+
+platforms:
+  - name: nomad
+    driver:
+      box: nomad
+      provider: virtualbox
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
