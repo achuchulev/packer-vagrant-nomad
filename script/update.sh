@@ -7,6 +7,14 @@ systemctl stop apt-daily.service apt-daily-upgrade.service
 systemctl mask apt-daily.service apt-daily-upgrade.service
 systemctl daemon-reload
 
+killall apt apt-get
+rm /var/lib/apt/lists/lock
+rm /var/cache/apt/archives/lock
+rm /var/lib/dpkg/lock*
+dpkg --configure -a
+
+export DEBIAN_FRONTEND=noninteractive
+
 # install packages and upgrade
 echo "==> Updating list of repositories"
 apt -y update
