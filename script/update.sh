@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/usr/bin/env bash
 
 echo "==> Disabling apt.daily.service & apt-daily-upgrade.service"
 systemctl stop apt-daily.timer apt-daily-upgrade.timer
