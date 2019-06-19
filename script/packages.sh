@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 mkdir -p /etc/dpkg/dpkg.cfg.d
 cat >/etc/dpkg/dpkg.cfg.d/01_nodoc <<EOF
 path-exclude /usr/share/doc/*
