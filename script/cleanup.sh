@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/usr/bin/env bash
 
 SSH_USER=${SSH_USERNAME:-vagrant}
 
