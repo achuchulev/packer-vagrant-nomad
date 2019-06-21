@@ -97,14 +97,15 @@
             "execute_command": "echo '{{user `ssh_password`}}'|{{.Vars}} sudo -E -S bash '{{.Path}}'",
             "expect_disconnect": true,
             "scripts": [
-                "script/update.sh",
-                "script/motd.sh",
-                "script/vagrant.sh",
-                "script/packages.sh",
-                "script/nomad.sh",
-                "script/minimize.sh",
-                "script/virtualbox.sh",
-                "script/cleanup.sh"
+                "scripts/update.sh",
+                "scripts/motd.sh",
+                "scripts/vagrant.sh",
+                "scripts/packages.sh",
+                "scripts/nomad.sh",
+                "scripts/nomad-drivers.sh",
+                "scripts/minimize.sh",
+                "scripts/virtualbox.sh",
+                "scripts/cleanup.sh"
             ],
             "type": "shell"
         }
