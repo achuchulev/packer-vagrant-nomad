@@ -21,3 +21,11 @@ control 'nomad' do
   end
 end
 
+control 'nomad-client-drivers' do
+  describe package('docker.io') do
+    it { should be_installed }
+  end
+  describe package('default-jre') do
+    it { should be_installed }
+  end
+end
